@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044671409623",
+    "project_id": "habsheet",
+    "storage_bucket": "habsheet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044671409623:android:0bd8bf9723a896cb8cef92",
+        "android_client_info": {
+          "package_name": "com.simmbiote.habsheet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9JWCUKjMsdCL5UxPadRCyG6PkPen3gVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
