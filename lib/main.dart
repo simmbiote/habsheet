@@ -25,7 +25,12 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    serverClientId:
+        // "1044671409623-ovig8g04jui030divvh163usv72ph32l.apps.googleusercontent.com", // Android client id
+        "1044671409623-l99j29r2j6q1tj42inerq82dsrv606ve.apps.googleusercontent.com", // Web client id
+    scopes: ['email'],
+  );
   GoogleSignInAccount? _currentUser;
 
   @override
