@@ -7,31 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1044671409623:android:0bd8bf9723a896cb8cef92",
-        "android_client_info": {
-          "package_name": "za.co.simmbiote.habsheet"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC9JWCUKjMsdCL5UxPadRCyG6PkPen3gVU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:1044671409623:android:26a4c66dbfa903dc8cef92",
         "android_client_info": {
           "package_name": "za.co.thesimms.habsheet"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1044671409623-ovig8g04jui030divvh163usv72ph32l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "za.co.thesimms.habsheet",
+            "certificate_hash": "7ba2a1c84fd23be0c8afc9c5aa060a8f71fdab9a"
+          }
+        },
+        {
+          "client_id": "1044671409623-l99j29r2j6q1tj42inerq82dsrv606ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC9JWCUKjMsdCL5UxPadRCyG6PkPen3gVU"
@@ -39,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044671409623-l99j29r2j6q1tj42inerq82dsrv606ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

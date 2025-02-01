@@ -49,9 +49,19 @@ class _SignInScreenState extends State<SignInScreen> {
 
   Future<void> _handleSignIn() async {
     try {
-      await _googleSignIn.signIn();
+      final GoogleSignInAccount? account = await _googleSignIn.signIn();
+      print("User Signed In: ${account?.email}");
+
+      if (account != null) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  HabitSelectionScreen(userEmail: account.email)),
+        );
+      }
     } catch (error) {
-      print(error);
+      print("Sign-In Error: $error");
     }
   }
 
