@@ -102,9 +102,24 @@ class _HabitSelectionScreenState extends State<HabitSelectionScreen> {
   Future<void> _createHabitSheet() async {
     final url = Uri.parse(
         "https://script.google.com/macros/s/AKfycbxNTSgY4f_LvUifX0B9A6yBhGiGrhLTmWQBjb9deVZJFMQmUOtJppKvi6jkdwyBRcABUQ/exec");
+
+    // Get Google Sign-In token
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+    final String? idToken = googleAuth?.idToken;
+
+    if (idToken == null) {
+      print("Error: Unable to retrieve Google ID Token");
+      return;
+    }
+
     final response = await http.post(
       url,
-      headers: {"Content-Type": "application/json"},
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer $idToken",
+      },
       body: jsonEncode({
         "action": "create",
         "userEmail": widget.userEmail,
@@ -168,6 +183,10 @@ class _HabitSelectionScreenState extends State<HabitSelectionScreen> {
           ElevatedButton(
             onPressed: _createHabitSheet,
             child: Text("Create Google Sheet"),
+          ),
+          ElevatedButton(
+            onPressed: _createHabitSheet,
+            child: Text("Sign out"),
           ),
         ],
       ),
